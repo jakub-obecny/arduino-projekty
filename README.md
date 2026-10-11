@@ -57,7 +57,7 @@ Použité knihovny (`WiFi`, `WebServer`, `HTTPClient`, `Preferences`, `time.h`) 
 
 ## Projekt 1: Webové hodiny (Brno)
 
-Soubor: `time-Brno-web/time-Brno-web.ino`
+Soubor: `čas-Brno-web/čas-Brno-web.ino`
 
 ESP32 se připojí k WiFi, synchronizuje čas přes NTP a spustí malý webserver na portu 80. Po otevření IP adresy desky v prohlížeči se zobrazí stránka s velkými zelenými číslicemi na tmavém pozadí, která si každou sekundu doptává aktuální čas.
 
@@ -163,10 +163,10 @@ Arduino IDE vyžaduje, aby se složka jmenovala stejně jako hlavní `.ino` soub
 
 ## Známá omezení
 
-- WiFi údaje jsou zapsané přímo ve zdrojovém kódu.
+- Wi‑Fi údaje jsou zapsané přímo ve zdrojovém kódu.
 - Webserver hodin nemá žádné zabezpečení ani HTTPS, je určený pro domácí síť.
-- Monitor testuje dostupnost jen jedné URL. Pokud je právě ona nedostupná, bude se zobrazovat chyba internetu, i když zbytek světa funguje.
-- Při neúspěšném připojení k WiFi hodiny a poznámky čekají donekonečna (bez timeoutu).
+- Monitor testuje dostupnost pouze jedné URL. Pokud je právě ona nedostupná, bude se zobrazovat chyba internetu, i když zbytek světa funguje.
+- Při neúspěšném připojení k Wi‑Fi hodiny a poznámky čekají donekonečna (bez timeoutu).
 - **Poznámky:** aplikace nemá přihlášení, poznámky může číst i mazat kdokoli v síti. Mazání je řešeno přes GET požadavky a text poznámek se na stránce vkládá bez ošetření HTML, takže se hodí jen do důvěryhodné domácí sítě.
 - **Poznámky:** časové pásmo je nastaveno pevným posunem (GMT+1 a +1 h letního času), takže se čas při přechodu na zimní čas sám nezmění. Projekt s hodinami používá řetězec `Europe/Prague` a tento problém nemá.
 - Ukládání do flash paměti má omezený počet zápisů, pro časté zápisy to není ideální.
