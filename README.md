@@ -6,7 +6,7 @@ Tři malé hobby projekty pro **Arduino Nano ESP32** (Arduino framework), které
 
 | Projekt | Co dělá |
 |---|---|
-| [`time-Brno-web`](./time-Brno-web) | Webová stránka s aktuálním časem (Brno / Europe/Prague), čas se bere z NTP |
+| [`čas-Brno-web`](./čas-Brno-web) | Webová stránka s aktuálním časem (Brno / Europe/Prague), čas se bere z NTP |
 | [`internet_monitor`](./internet_monitor) | Kontroluje WiFi a dostupnost internetu, stav ukazuje vestavěná RGB LED |
 | [`poznamky-web`](./poznamky-web) | Webová aplikace na poznámky, které se ukládají do flash paměti ESP32 |
 
