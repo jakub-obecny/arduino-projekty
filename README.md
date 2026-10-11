@@ -6,7 +6,7 @@ Tři malé hobby projekty pro **Arduino Nano ESP32** (Arduino framework), které
 
 | Projekt | Co dělá |
 |---|---|
-| [`cas-brno-web`](./cas-brno-web) | Webová stránka s aktuálním časem (Brno / Europe/Prague), čas se bere z NTP |
+| [`time-Brno-web`](./time-Brno-web) | Webová stránka s aktuálním časem (Brno / Europe/Prague), čas se bere z NTP |
 | [`internet_monitor`](./internet_monitor) | Kontroluje WiFi a dostupnost internetu, stav ukazuje vestavěná RGB LED |
 | [`poznamky-web`](./poznamky-web) | Webová aplikace na poznámky, které se ukládají do flash paměti ESP32 |
 
@@ -21,7 +21,9 @@ Tři malé hobby projekty pro **Arduino Nano ESP32** (Arduino framework), které
 - [Projekt 1: Webové hodiny (Brno)](#projekt-1-webové-hodiny-brno)
 - [Projekt 2: Internet Connection Monitor](#projekt-2-internet-connection-monitor)
 - [Projekt 3: Webové poznámky](#projekt-3-webové-poznámky)
-- [Známá omezení](#známá-omezení
+- [Struktura repozitáře](#struktura-repozitáře)
+- [Známá omezení](#známá-omezení)
+- [Licence](#licence)
 
 ---
 
@@ -38,7 +40,7 @@ Použité knihovny (`WiFi`, `WebServer`, `HTTPClient`, `Preferences`, `time.h`) 
 
 1. Naklonuj repozitář:
    ```bash
-   git clone https://github.com/<uzivatel>/<repozitar>.git
+   git clone https://github.com/jakub-obecny/arduino-projekty.git
    ```
 2. Otevři příslušný `.ino` soubor v Arduino IDE.
 3. Doplň údaje o své WiFi síti:
@@ -49,12 +51,13 @@ Použité knihovny (`WiFi`, `WebServer`, `HTTPClient`, `Preferences`, `time.h`) 
 4. Vyber správnou desku a port, nahraj sketch.
 5. Otevři Serial Monitor (**115200 baud**).
 
+> ⚠️ **Nikdy necommituj své skutečné WiFi heslo.** V repozitáři nech zástupné hodnoty.
 
 ---
 
 ## Projekt 1: Webové hodiny (Brno)
 
-Soubor: `cas-brno-web/cas-brno-web.ino`
+Soubor: `time-Brno-web/time-Brno-web.ino`
 
 ESP32 se připojí k WiFi, synchronizuje čas přes NTP a spustí malý webserver na portu 80. Po otevření IP adresy desky v prohlížeči se zobrazí stránka s velkými zelenými číslicemi na tmavém pozadí, která si každou sekundu doptává aktuální čas.
 
@@ -109,6 +112,8 @@ const int checkInterval = 10000;               // interval kontroly v ms
 
 Vestavěná RGB LED na Arduino Nano ESP32 má společnou anodu, proto kód hodnoty invertuje (`255 - hodnota`). Piny `LED_RED`, `LED_GREEN` a `LED_BLUE` jsou předdefinované v konfiguraci desky. Na jiné desce bude potřeba piny a logiku upravit.
 
+---
+
 ## Projekt 3: Webové poznámky
 
 Soubor: `poznamky-web/poznamky-web.ino`
@@ -141,6 +146,18 @@ ESP32 funguje jako malý poznámkový blok dostupný z prohlížeče v domácí 
 
 ---
 
+## Struktura repozitáře
+
+```
+.
+├── README.md
+├── internet_monitor/
+│   └── internet_monitor.ino
+├── poznamky-web/
+│   └── poznamky-web.ino
+└── time-Brno-web/
+    └── time-Brno-web.ino
+```
 
 Arduino IDE vyžaduje, aby se složka jmenovala stejně jako hlavní `.ino` soubor.
 
@@ -153,9 +170,7 @@ Arduino IDE vyžaduje, aby se složka jmenovala stejně jako hlavní `.ino` soub
 - **Poznámky:** aplikace nemá přihlášení, poznámky může číst i mazat kdokoli v síti. Mazání je řešeno přes GET požadavky a text poznámek se na stránce vkládá bez ošetření HTML, takže se hodí jen do důvěryhodné domácí sítě.
 - **Poznámky:** časové pásmo je nastaveno pevným posunem (GMT+1 a +1 h letního času), takže se čas při přechodu na zimní čas sám nezmění. Projekt s hodinami používá řetězec `Europe/Prague` a tento problém nemá.
 - Ukládání do flash paměti má omezený počet zápisů, pro časté zápisy to není ideální.
-Doplň licenci podle své volby (např. MIT) a přidej soubor `LICENSE`.
 
-## Poděkování
 
 - Kód a dokumentace vznikly s pomocí AI asistenta **Claude** (Anthropic).
 - ESP32 Arduino core od Espressif.
