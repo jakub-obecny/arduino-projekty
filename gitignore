@@ -1,0 +1,28 @@
+# Build
+build/
+**/build/
+*.elf
+*.bin
+*.hex
+*.map
+*.eep
+*.lst
+
+# Arduino IDE / PlatformIO
+.arduino/
+.pio/
+
+# Citlivé údaje
+secrets.h
+credentials.h
+.env
+
+# Editory
+.vscode/
+.idea/
+*.swp
+*~
+
+# Systém
+.DS_Store
+Thumbs.db
