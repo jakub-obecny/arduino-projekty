@@ -21,9 +21,7 @@ Tři malé hobby projekty pro **Arduino Nano ESP32** (Arduino framework), které
 - [Projekt 1: Webové hodiny (Brno)](#projekt-1-webové-hodiny-brno)
 - [Projekt 2: Internet Connection Monitor](#projekt-2-internet-connection-monitor)
 - [Projekt 3: Webové poznámky](#projekt-3-webové-poznámky)
-- [Struktura repozitáře](#struktura-repozitáře)
-- [Známá omezení](#známá-omezení)
-- [Licence](#licence)
+- [Známá omezení](#známá-omezení
 
 ---
 
@@ -51,7 +49,6 @@ Použité knihovny (`WiFi`, `WebServer`, `HTTPClient`, `Preferences`, `time.h`) 
 4. Vyber správnou desku a port, nahraj sketch.
 5. Otevři Serial Monitor (**115200 baud**).
 
-> ⚠️ **Nikdy necommituj své skutečné WiFi heslo.** V repozitáři nech zástupné hodnoty.
 
 ---
 
@@ -144,18 +141,6 @@ ESP32 funguje jako malý poznámkový blok dostupný z prohlížeče v domácí 
 
 ---
 
-## Struktura repozitáře
-
-```
-.
-├── README.md
-├── cas-brno-web/
-│   └── cas-brno-web.ino
-├── internet_monitor/
-│   └── internet_monitor.ino
-└── poznamky-web/
-    └── poznamky-web.ino
-```
 
 Arduino IDE vyžaduje, aby se složka jmenovala stejně jako hlavní `.ino` soubor.
 
@@ -168,9 +153,6 @@ Arduino IDE vyžaduje, aby se složka jmenovala stejně jako hlavní `.ino` soub
 - **Poznámky:** aplikace nemá přihlášení, poznámky může číst i mazat kdokoli v síti. Mazání je řešeno přes GET požadavky a text poznámek se na stránce vkládá bez ošetření HTML, takže se hodí jen do důvěryhodné domácí sítě.
 - **Poznámky:** časové pásmo je nastaveno pevným posunem (GMT+1 a +1 h letního času), takže se čas při přechodu na zimní čas sám nezmění. Projekt s hodinami používá řetězec `Europe/Prague` a tento problém nemá.
 - Ukládání do flash paměti má omezený počet zápisů, pro časté zápisy to není ideální.
-
-## Licence
-
 Doplň licenci podle své volby (např. MIT) a přidej soubor `LICENSE`.
 
 ## Poděkování
