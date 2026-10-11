@@ -173,4 +173,3 @@ Arduino IDE vyžaduje, aby se složka jmenovala stejně jako hlavní `.ino` soub
 
 
 - Kód a dokumentace vznikly s pomocí AI asistenta **Claude** (Anthropic).
-- ESP32 Arduino core od Espressif.
