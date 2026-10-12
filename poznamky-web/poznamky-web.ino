@@ -11,8 +11,8 @@ const char* password = "VAŠE_HESLO";
 WebServer server(80);
 Preferences preferences;
 
-const int MAX_NOTES = 20;
-const int MAX_NOTE_LENGTH = 200;
+const int MAX_NOTES = 45;
+const int MAX_NOTE_LENGTH = 400;
 
 // NTP server pro synchronizaci času
 const char* ntpServer = "pool.ntp.org";
