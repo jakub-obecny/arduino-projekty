@@ -122,11 +122,11 @@ ESP32 funguje jako malý poznámkový blok dostupný z prohlížeče v domácí 
 
 ### Funkce
 
-- přidání poznámky (max. **200 znaků**)
+- přidání poznámky (max. **400 znaků**)
 - zobrazení seznamu poznámek s datem a časem
 - smazání jedné poznámky
 - smazání všech poznámek (s potvrzením)
-- limit **20 poznámek**
+- limit **45 poznámek**
 - responzivní stránka s fialovým přechodem na pozadí, použitelná i na mobilu
 
 ### Endpointy
