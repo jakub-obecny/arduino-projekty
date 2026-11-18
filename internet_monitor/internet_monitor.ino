@@ -9,14 +9,15 @@
  * - VYPNUTO: Nepřipojeno k WiFi
  */
 
+
 #include <WiFi.h>
 #include <HTTPClient.h>
 
 // ===== KONFIGURACE - ZMĚŇ PODLE SVÝCH POTŘEB =====
-const char* ssid = "VAŠE SSID";        // Nahraď svým WiFi názvem
-const char* password = "VAŠE HESLO";   // Nahraď svým WiFi heslem
+const char* ssid = "VASE SSID";        // Nahraď svým WiFi názvem
+const char* password = "VASE HESLO";   // Nahraď svým WiFi heslem
 const char* testUrl = "http://www.google.com"; // URL pro test připojení
-const int checkInterval = 10000;              // Interval mezi testy v ms (10 sekund)
+const int checkInterval = 15000;              // Interval mezi testy v ms (15 sekund)
 
 // ===== PIN DEFINICE PRO RGB LED =====
 // Arduino Nano ESP32 má vestavěnou RGB LED - konstanty LED_RED, LED_GREEN, LED_BLUE
