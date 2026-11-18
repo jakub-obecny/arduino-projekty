@@ -1,4 +1,5 @@
-// Generated from the original static/styles.css
+// Generated from the original static/styles.css file
+
 #pragma once
 #include <pgmspace.h>
 static const char STYLES_CSS[] PROGMEM = R"CSS(:root {
