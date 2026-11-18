@@ -20,8 +20,8 @@
 // ============================== CONFIG ==============================
 static const char *AP_SSID   = "Archain";        // the board's own Wi-Fi (field use, no internet)
 static const char *AP_PASS   = "archain-field";  // min. 8 characters, "" = open network
-static const char *STA_SSID  = "jahodovy-knedlik";               // optional: also join your Wi-Fi (weather + NTP + maps)
-static const char *STA_PASS  = "11593638";
+static const char *STA_SSID  = "YOUR-SSID";               // optional: also join your Wi-Fi (weather + NTP + maps)
+static const char *STA_PASS  = "YOUR-PASSWD";
 static const char *HOSTNAME  = "nano-web";        // http://archain.local
 static const char *TZ_INFO   = "CET-1CEST,M3.5.0,M10.5.0/3";  // Central Europe
 #define USE_SD        0                          // 1 = store everything on an SPI SD card
